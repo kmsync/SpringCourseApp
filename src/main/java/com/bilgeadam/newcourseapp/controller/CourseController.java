@@ -16,6 +16,12 @@ public class CourseController {
     @Autowired
     private CourseRepository courseRepository;
 
+    @GetMapping
+    public String selamla()
+    {
+        return "Öncelikle Course mikroservis diyarından herkese selamlar :)";
+    }
+
     @GetMapping("/course/{courseId}")
     public Course getCourse(@PathVariable("courseId") long id)
     {
